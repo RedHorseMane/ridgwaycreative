@@ -15,9 +15,16 @@ Disallow: /private/
 Disallow: /temp/
 Disallow: /templates/
 
+# ──────────────────────────────────────────────
+# Block internal-use social media redirect pages
+# ──────────────────────────────────────────────
+Disallow: /bluesky.html
+Disallow: /facebook.html
+Disallow: /instagram.html
+Disallow: /threads.html
 
 # ──────────────────────────────────────────────
-# Throttle Bing’s bingbot to reduce load (Google ignores Crawl‑delay)
+# Throttle Bing's bingbot to reduce load (Google ignores Crawl‑delay)
 # ──────────────────────────────────────────────
 User-agent: bingbot
 Crawl-delay: 10
@@ -25,5 +32,5 @@ Crawl-delay: 10
 # ──────────────────────────────────────────────
 # Sitemap location
 # ──────────────────────────────────────────────
-# Sitemap: https://ridgwaycreative.com/sitemap.xml
+Sitemap: https://ridgwaycreative.com/sitemap.xml
 

@@ -266,8 +266,8 @@ var klaroConfig = {
 <body>
   <div id="klaro"></div>
   <div style="text-align: right; margin-top: 1rem;">
-    <a href="docs/privacy.html" lang="en" hreflang="en" style="margin-right: 1em;">🇬🇧 English</a>
-    <a href="docs/confidentialite.html" lang="fr" hreflang="fr">🇫🇷 Français</a>
+    <button onclick="toggleLanguage('en')" lang="en" style="margin-right: 1em; background: none; border: none; cursor: pointer; font-size: 1em; padding: 0.5em;">🇬🇧 English</button>
+    <button onclick="toggleLanguage('fr')" lang="fr" style="background: none; border: none; cursor: pointer; font-size: 1em; padding: 0.5em;">🇫🇷 Français</button>
   </div>
     <header class="hero">
         <div class="container">
@@ -279,8 +279,8 @@ var klaroConfig = {
                 </div>
                 <div class="hero-text">
                     <h1>Brady Ridgway</h1>
-                    <p class="tagline">Author | Maker | Developer</p>
-                    <p class="intro">Welcome to my creative hub. I write children's books, design electronics, and build custom projects — all driven by curiosity and storytelling.</p>
+                    <p class="tagline translatable" data-lang-en="Author | Maker | Developer" data-lang-fr="Auteur | Créateur | Développeur">Author | Maker | Developer</p>
+                    <p class="intro translatable" data-lang-en="Welcome to my creative hub. I write children's books, design electronics, and build custom projects — all driven by curiosity and storytelling." data-lang-fr="Bienvenue dans mon espace créatif. J'écris des livres pour enfants, conçois des projets électroniques et réalise des projets personnalisés — le tout animé par la curiosité et l'art de raconter des histoires.">Welcome to my creative hub. I write children's books, design electronics, and build custom projects — all driven by curiosity and storytelling.</p>
                 </div>
             </div>
         </div>
@@ -290,8 +290,8 @@ var klaroConfig = {
         <div class="container">
             <!-- Books Section -->
             <section class="section">
-                <h2>Books & Writing</h2>
-                <p class="section-description">
+                <h2 class="translatable" data-lang-en="Books & Writing" data-lang-fr="Livres & Écriture">Books & Writing</h2>
+                <p class="section-description translatable" data-lang-en="Discover my collection of stories, from middle-grade adventures to thrilling novels that captivate readers of all ages." data-lang-fr="Découvrez ma collection d'histoires, des aventures pour jeunes lecteurs aux romans palpitants qui captivent les lecteurs de tous âges.">
                     Discover my collection of stories, from middle-grade adventures to thrilling novels that captivate readers of all ages.
                 </p>
                 
@@ -301,9 +301,9 @@ var klaroConfig = {
                             <img src="static/images/ww_cover.webp"
                                  alt="The Adventures of William Woodpecker - Cover"></div>
                         <h3>The Adventures of William Woodpecker</h3>
-                        <p>A middle-grade adventure about a curious woodpecker who sets out on a journey of self-discovery and friendship.</p>
+                        <p class="translatable" data-lang-en="A middle-grade adventure about a curious woodpecker who sets out on a journey of self-discovery and friendship." data-lang-fr="Une aventure pour jeunes lecteurs sur un pivert curieux qui part en voyage de découverte de soi et d'amitié.">A middle-grade adventure about a curious woodpecker who sets out on a journey of self-discovery and friendship.</p>
                         <div class="book-links">
-                            <a href="https://williamwoodpecker.com" class="book-link" target="_blank">Visit Site</a>
+                            <a href="https://williamwoodpecker.com" class="book-link translatable" target="_blank" data-lang-en="Visit Site" data-lang-fr="Visiter le site">Visit Site</a>
                         </div>
                     </div>
                     
@@ -313,19 +313,19 @@ var klaroConfig = {
                             alt="Elements of Risk - Cover">
                         </div>
                         <h3>Elements of Risk</h3>
-                        <p>A suspenseful novel with high stakes, danger, and gripping twists that will keep you on the edge of your seat.</p>
+                        <p class="translatable" data-lang-en="A suspenseful novel with high stakes, danger, and gripping twists that will keep you on the edge of your seat." data-lang-fr="Un roman à suspense avec des enjeux élevés, du danger et des rebondissements captivants qui vous tiendront en haleine.">A suspenseful novel with high stakes, danger, and gripping twists that will keep you on the edge of your seat.</p>
                         <div class="book-links">
                             <a href="https://www.amazon.com/dp/B01MQR2LJL" class="book-link" target="_blank">Amazon</a>
                         </div>
                     </div>
-                    
+
                     <div class="book-card">
                         <div class="book-thumbnail">
                             <img src="static/images/the_horn_mansion.webp"
                             alt="The Horn Mansion - Cover">
                         </div>
                         <h3>The Horn Mansion</h3>
-                        <p>A thrilling mystery with supernatural undertones and dark secrets waiting to be uncovered.</p>
+                        <p class="translatable" data-lang-en="A thrilling mystery with supernatural undertones and dark secrets waiting to be uncovered." data-lang-fr="Un mystère captivant avec des nuances surnaturelles et des secrets sombres qui attendent d'être découverts.">A thrilling mystery with supernatural undertones and dark secrets waiting to be uncovered.</p>
                         <div class="book-links">
                             <a href="https://www.amazon.com/dp/B07M9SMQMP" class="book-link" target="_blank">Amazon</a>
                         </div>
@@ -333,7 +333,7 @@ var klaroConfig = {
                 </div>
                 
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="https://bradyridgway.com" class="dev-link" target="_blank">
+                    <a href="https://bradyridgway.com" class="dev-link translatable" target="_blank" data-lang-en="Explore Author Site" data-lang-fr="Découvrir le site de l'auteur">
                         Explore Author Site
                     </a>
                 </div>
@@ -347,8 +347,8 @@ var klaroConfig = {
                             alt="Sonciel Logo">
                     </div>
                     <div>
-                        <h2 style="margin-bottom: 0;">Electronics & 3D Printing</h2>
-                        <p class="section-description" style="margin-bottom: 0;">
+                        <h2 class="translatable" style="margin-bottom: 0;" data-lang-en="Electronics & 3D Printing" data-lang-fr="Électronique & Impression 3D">Electronics & 3D Printing</h2>
+                        <p class="section-description translatable" style="margin-bottom: 0;" data-lang-en="I run Sonciel, a small electronics brand based in France, creating innovative solutions for makers and developers." data-lang-fr="Je dirige Sonciel, une petite marque d'électronique basée en France, créant des solutions innovantes pour les makers et les développeurs.">
                             I run Sonciel, a small electronics brand based in France, creating innovative solutions for makers and developers.
                         </p>
                     </div>
@@ -361,20 +361,20 @@ var klaroConfig = {
                                  alt="Programming shield on Arduino Uno">
                              </div>
                         <h3>ATtiny Programming Shield</h3>
-                        <p>A reliable programming shield for ATtiny microcontrollers, compatible with Arduino Uno boards. Perfect for prototyping and development.</p>
+                        <p class="translatable" data-lang-en="A reliable programming shield for ATtiny microcontrollers, compatible with Arduino Uno boards. Perfect for prototyping and development." data-lang-fr="Une shield de programmation fiable pour microcontrôleurs ATtiny, compatible avec les cartes Arduino Uno. Parfait pour le prototypage et le développement.">A reliable programming shield for ATtiny microcontrollers, compatible with Arduino Uno boards. Perfect for prototyping and development.</p>
                         <div class="book-links">
                             <a href="https://www.etsy.com/shop/Sonciel" class="book-link" target="_blank">Etsy</a>
                             <a href="https://amazon.fr/dp/B0FBYF885W" class="book-link" target="_blank">Amazon</a>
                         </div>
                     </div>
-                    
+
                     <div class="product-card">
                         <div class="product-image">
                             <img src="static/images/box_group.webp"
                                  alt="Three plastic boxes in red, white and blue">
                         </div>
-                        <h3>3D Printed Guitar Pedal Enclosures</h3>
-                        <p>Durable, customizable 3D printed enclosures for guitar pedal prototyping and electronics projects.</p>
+                        <h3 class="translatable" data-lang-en="3D Printed Guitar Pedal Enclosures" data-lang-fr="Boîtiers de pédales de guitare imprimés en 3D">3D Printed Guitar Pedal Enclosures</h3>
+                        <p class="translatable" data-lang-en="Durable, customizable 3D printed enclosures for guitar pedal prototyping and electronics projects." data-lang-fr="Boîtiers imprimés en 3D durables et personnalisables pour le prototypage de pédales de guitare et les projets électroniques.">Durable, customizable 3D printed enclosures for guitar pedal prototyping and electronics projects.</p>
                         <div class="book-links">
                             <a href="https://www.amazon.fr/dp/B0FCD7N4VF" class="book-link" target="_blank">Amazon</a>
                             <a href="https://www.etsy.com/shop/Sonciel" class="book-link" target="_blank">Etsy</a>
@@ -383,7 +383,7 @@ var klaroConfig = {
                 </div>
                 
                 <div style="text-align: center; margin-top: 2rem;">
-                    <a href="https://sonciel.com" class="dev-link" target="_blank">
+                    <a href="https://sonciel.com" class="dev-link translatable" target="_blank" data-lang-en="Visit Sonciel.com" data-lang-fr="Visiter Sonciel.com">
                         Visit Sonciel.com
                     </a>
                 </div>
@@ -391,16 +391,16 @@ var klaroConfig = {
 
             <!-- Development Section -->
             <section class="section">
-                <h2>Development Projects</h2>
-                <p class="section-description">
+                <h2 class="translatable" data-lang-en="Development Projects" data-lang-fr="Projets de Développement">Development Projects</h2>
+                <p class="section-description translatable" data-lang-en="I practice Python and Django development, experimenting with tools and small web applications that solve real-world problems." data-lang-fr="Je pratique le développement Python et Django, en expérimentant avec des outils et de petites applications web qui résolvent des problèmes concrets.">
                     I practice Python and Django development, experimenting with tools and small web applications that solve real-world problems.
                 </p>
                 
                 <div class="dev-links">
-                    <a href="https://github.com/RedHorseMane" class="dev-link" target="_blank">
+                    <a href="https://github.com/RedHorseMane" class="dev-link translatable" target="_blank" data-lang-en="💻 GitHub Profile" data-lang-fr="💻 Profil GitHub">
                         💻 GitHub Profile
                     </a>
-                    <a href="https://bradyridgway.pythonanywhere.com" class="dev-link" target="_blank">
+                    <a href="https://bradyridgway.pythonanywhere.com" class="dev-link translatable" target="_blank" data-lang-en="🌐 Web Projects" data-lang-fr="🌐 Projets Web">
                         🌐 Web Projects
                     </a>
                 </div>
@@ -409,39 +409,67 @@ var klaroConfig = {
             <!-- Interactive Content -->
             <div class="interactive-content">
                 <div class="quote-box">
-                    <h2 style="margin-bottom: 1rem;">Quote of the Day</h2>
-                    <div id="quote-content" class="quote-content">Loading inspiring quote...</div>
+                    <h2 class="translatable" style="margin-bottom: 1rem;" data-lang-en="Quote of the Day" data-lang-fr="Citation du Jour">Quote of the Day</h2>
+                    <div id="quote-content" class="quote-content translatable" data-lang-en="Loading inspiring quote..." data-lang-fr="Chargement de la citation inspirante...">Loading inspiring quote...</div>
                 </div>
-                
+
                 <div class="advice-box">
-                    <h2 style="margin-bottom: 1rem;">Advice of the Moment</h2>
-                    <div id="advice-content" class="advice-content">Loading helpful advice...</div>
+                    <h2 class="translatable" style="margin-bottom: 1rem;" data-lang-en="Advice of the Moment" data-lang-fr="Conseil du Moment">Advice of the Moment</h2>
+                    <div id="advice-content" class="advice-content translatable" data-lang-en="Loading helpful advice..." data-lang-fr="Chargement du conseil utile...">Loading helpful advice...</div>
                 </div>
             </div>
         </div>
     </main>
     <footer class="footer">
             <div class="footer-links">
-                <a href="https://bradyridgway.com">Author Site</a>
+                <a href="https://bradyridgway.com" class="translatable" data-lang-en="Author Site" data-lang-fr="Site de l'auteur">Author Site</a>
                 <a href="https://williamwoodpecker.com">William Woodpecker</a>
                 <a href="https://sonciel.com">Sonciel</a>
                 <a href="https://github.com/RedHorseMane">GitHub</a>
             </div>
-            <p>&copy; 2025 Brady Ridgway. All rights reserved.</p>
+            <p class="translatable" data-lang-en="© 2025 Brady Ridgway. All rights reserved." data-lang-fr="© 2025 Brady Ridgway. Tous droits réservés.">&copy; 2025 Brady Ridgway. All rights reserved.</p>
         </div>
         <div class="container">
           <p style="text-align: center; font-size: 0.9em; margin-top: 2rem;">
-            <a style="color: white;" href="docs/privacy.html" hreflang="en">Privacy Policy</a> |
-            <a style="color: white;" href="docs/confidentialite.html" hreflang="fr">Politique de Confidentialité</a>
+            <a style="color: white;" href="docs/privacy.html" hreflang="en" class="translatable" data-lang-en="Privacy Policy" data-lang-fr="Politique de Confidentialité">Privacy Policy</a> |
+            <a style="color: white;" href="docs/confidentialite.html" hreflang="fr" class="translatable" data-lang-en="Privacy Policy" data-lang-fr="Politique de Confidentialité">Politique de Confidentialité</a>
         </p>
         <p style="text-align: center; font-size: 0.8em; margin-top: 0.5rem;">
-  <a href="#" onclick="klaro.show();" style="text-decoration: underline; color: inherit;">
+  <a href="#" onclick="klaro.show();" style="text-decoration: underline; color: inherit;" class="translatable" data-lang-en="Update Cookie Preferences" data-lang-fr="Mettre à jour les préférences de cookies">
     Update Cookie Preferences
   </a>
 </p>
     </footer>
 
     <script>
+        // Language Toggle Function
+        function toggleLanguage(lang) {
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+
+            // Get all translatable elements
+            const translatableElements = document.querySelectorAll('.translatable');
+
+            // Update each element with the appropriate language text
+            translatableElements.forEach(element => {
+                const text = element.getAttribute(`data-lang-${lang}`);
+                if (text) {
+                    element.textContent = text;
+                }
+            });
+
+            // Store language preference in localStorage
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Load saved language preference on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang && (savedLang === 'en' || savedLang === 'fr')) {
+                toggleLanguage(savedLang);
+            }
+        });
+
         // Fetch Quote of the Day
         fetch('https://bradyridgway.pythonanywhere.com/api/quote/')
             .then(response => response.json())
