@@ -1,5 +1,5 @@
 # robots.txt for https://ridgwaycreative.com/
-# Generated 2025‑07‑23 — update as your structure changes
+# Generated 2026‑04‑03 — update as your structure changes
 
 # ──────────────────────────────────────────────
 # Default: allow all well‑behaved bots to crawl everything

@@ -109,11 +109,11 @@
 
 </head>
 <body>
-  <div style="text-align: right; margin-top: 1rem;">
-    <button onclick="toggleLanguage('en')" lang="en" style="margin-right: 1em; background: none; border: none; cursor: pointer; font-size: 1em; padding: 0.5em;">🇬🇧 English</button>
-    <button onclick="toggleLanguage('fr')" lang="fr" style="background: none; border: none; cursor: pointer; font-size: 1em; padding: 0.5em;">🇫🇷 Français</button>
-  </div>
     <header class="hero">
+        <div class="lang-toggle">
+            <button onclick="toggleLanguage('en')" lang="en" class="lang-btn">EN</button>
+            <button onclick="toggleLanguage('fr')" lang="fr" class="lang-btn">FR</button>
+        </div>
         <div class="container">
             <div class="hero-content">
                 <div class="author-avatar">
@@ -133,7 +133,7 @@
     <main class="main-content">
         <div class="container">
             <!-- Books Section -->
-            <section class="section">
+            <section class="section reveal">
                 <h2 class="translatable" data-lang-en="Books & Writing" data-lang-fr="Livres & Écriture">Books & Writing</h2>
                 <p class="section-description translatable" data-lang-en="Discover my collection of stories, from middle-grade adventures to thrilling novels that captivate readers of all ages." data-lang-fr="Découvrez ma collection d'histoires, des aventures pour jeunes lecteurs aux romans palpitants qui captivent les lecteurs de tous âges.">
                     Discover my collection of stories, from middle-grade adventures to thrilling novels that captivate readers of all ages.
@@ -184,7 +184,7 @@
             </section>
 
             <!-- Sonciel Section -->
-            <section class="section sonciel-section">
+            <section class="section sonciel-section reveal">
                 <div class="sonciel-header">
                     <div class="sonciel-logo">
                         <img src="static/images/sonciel_logo.webp"
@@ -210,7 +210,7 @@
             </section>
 
             <!-- Development Section -->
-            <section class="section">
+            <section class="section reveal">
                 <h2 class="translatable" data-lang-en="Development Projects" data-lang-fr="Projets de Développement">Development Projects</h2>
                 <p class="section-description translatable" data-lang-en="I practice Python and Django development, experimenting with tools and small web applications that solve real-world problems." data-lang-fr="Je pratique le développement Python et Django, en expérimentant avec des outils et de petites applications web qui résolvent des problèmes concrets.">
                     I practice Python and Django development, experimenting with tools and small web applications that solve real-world problems.
@@ -227,7 +227,7 @@
             </section>
 
             <!-- Interactive Content -->
-            <div class="interactive-content">
+            <div class="interactive-content reveal">
                 <div class="quote-box">
                     <h2 class="translatable" style="margin-bottom: 1rem;" data-lang-en="Quote of the Day" data-lang-fr="Citation du Jour">Quote of the Day</h2>
                     <div id="quote-content" class="quote-content translatable" data-lang-en="Loading inspiring quote..." data-lang-fr="Chargement de la citation inspirante...">Loading inspiring quote...</div>
@@ -307,6 +307,18 @@
                 console.error('Error:', error);
                 document.getElementById('advice-content').innerText = "Take time to appreciate the journey, not just the destination.";
             });
+
+        // Scroll-reveal with IntersectionObserver
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
 </body>
 </html>
