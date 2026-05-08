@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Favicon links -->
     <link rel="icon" href="static/icons/favicon.ico" type="image/x-icon">
     <link rel="icon" type="image/png" sizes="32x32" href="static/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="static/icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="static/icons/android-chrome-512x512.png">
     <link rel="apple-touch-icon" sizes="180x180" href="static/icons/apple-touch-icon.png">
     <link rel="manifest" href="static/icons/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0f1a2d">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#060c18">
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,16 +16,16 @@
     <meta property="og:url" content="https://ridgwaycreative.com/">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://ridgwaycreative.com/images/og_image.jpg">
-
-     <!-- Canonical URL -->
-  <link rel="canonical" href="https://ridgwaycreative.com">
+    <link rel="canonical" href="https://ridgwaycreative.com">
 
     <title>Brady Ridgway | Author, Developer & Creator</title>
     <meta name="description" content="Discover the books, software projects, and creative ventures of Brady Ridgway, author of The Adventures of William Woodpecker and founder of Sonciel.">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="style.css?v=3">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=4">
+
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -47,10 +46,7 @@
     {
       "@type": "Book",
       "name": "The Adventures of William Woodpecker",
-      "author": {
-        "@type": "Person",
-        "name": "Brady Ridgway"
-      },
+      "author": { "@type": "Person", "name": "Brady Ridgway" },
       "image": "https://williamwoodpecker.com/static/images/ww_cover.jpg",
       "description": "A middle-grade adventure about a curious woodpecker who sets out on a journey of self-discovery and friendship.",
       "offers": {
@@ -62,10 +58,7 @@
     {
       "@type": "Book",
       "name": "Elements of Risk",
-      "author": {
-        "@type": "Person",
-        "name": "Brady Ridgway"
-      },
+      "author": { "@type": "Person", "name": "Brady Ridgway" },
       "image": "https://bradyridgway.com/images/Elements_of_Risk.jpg",
       "description": "A suspenseful novel with high stakes, danger, and gripping twists.",
       "offers": {
@@ -79,10 +72,7 @@
     {
       "@type": "Book",
       "name": "The Horn Mansion",
-      "author": {
-        "@type": "Person",
-        "name": "Brady Ridgway"
-      },
+      "author": { "@type": "Person", "name": "Brady Ridgway" },
       "image": "https://bradyridgway.com/static/images/The_Horn_Mansion.jpg",
       "description": "A thrilling mystery with supernatural undertones and dark secrets.",
       "offers": {
@@ -98,33 +88,49 @@
       "name": "Sonciel",
       "url": "https://sonciel.com",
       "description": "Music software in concept development — building tools for studio workflow and session attribution.",
-      "founder": {
-        "@type": "Person",
-        "name": "Brady Ridgway"
-      }
+      "founder": { "@type": "Person", "name": "Brady Ridgway" }
     }
   ]
 }
-</script>
-
+    </script>
 </head>
 <body>
-    <header class="hero">
-        <div class="lang-toggle">
-            <button onclick="toggleLanguage('en')" lang="en" class="lang-btn">EN</button>
-            <button onclick="toggleLanguage('fr')" lang="fr" class="lang-btn">FR</button>
+
+    <!-- Navigation -->
+    <nav class="site-nav" id="site-nav">
+        <div class="nav-inner">
+            <a href="#home" class="nav-logo">Brady Ridgway</a>
+            <div class="nav-links">
+                <a href="#books" class="nav-link translatable" data-lang-en="Books" data-lang-fr="Livres">Books</a>
+                <a href="#sonciel" class="nav-link">Sonciel</a>
+                <a href="#obravera" class="nav-link">ObraVera</a>
+            </div>
+            <div class="lang-toggle">
+                <button onclick="toggleLanguage('en')" data-lang="en" class="lang-btn active">EN</button>
+                <button onclick="toggleLanguage('fr')" data-lang="fr" class="lang-btn">FR</button>
+            </div>
         </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero" id="home">
         <div class="container">
-            <div class="hero-content">
-                <div class="author-avatar">
-                   <img
-              src="static/images/brady.webp"
-              alt="Brady Ridgway - Author Photo">
-                </div>
+            <div class="hero-inner">
                 <div class="hero-text">
-                    <h1>Brady Ridgway</h1>
-                    <p class="tagline translatable" data-lang-en="Author | Developer | Creator" data-lang-fr="Auteur | Développeur | Créateur">Author | Developer | Creator</p>
-                    <p class="intro translatable" data-lang-en="Welcome to my creative hub. I write books, develop software, and build projects — all driven by curiosity and storytelling." data-lang-fr="Bienvenue dans mon espace créatif. J'écris des livres, développe des logiciels et réalise des projets — le tout animé par la curiosité et l'art de raconter des histoires.">Welcome to my creative hub. I write books, develop software, and build projects — all driven by curiosity and storytelling.</p>
+                    <p class="hero-label translatable" data-lang-en="Author · Developer · Creator" data-lang-fr="Auteur · Développeur · Créateur">Author · Developer · Creator</p>
+                    <h1>Brady<br>Ridgway</h1>
+                    <p class="hero-intro translatable" data-lang-en="I write books, build software, and explore what happens when storytelling meets technology." data-lang-fr="J'écris des livres, développe des logiciels et explore ce qui se passe quand la narration rencontre la technologie.">
+                        I write books, build software, and explore what happens when storytelling meets technology.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#books" class="cta-primary translatable" data-lang-en="Explore Books" data-lang-fr="Découvrir les livres">Explore Books</a>
+                        <a href="#sonciel" class="cta-secondary translatable" data-lang-en="About Sonciel" data-lang-fr="À propos de Sonciel">About Sonciel</a>
+                    </div>
+                </div>
+                <div class="hero-portrait">
+                    <div class="portrait-frame">
+                        <img src="static/images/brady.webp" alt="Brady Ridgway">
+                    </div>
                 </div>
             </div>
         </div>
@@ -132,29 +138,29 @@
 
     <main class="main-content">
         <div class="container">
+
             <!-- Books Section -->
-            <section class="section reveal">
+            <section class="section reveal" id="books">
                 <h2 class="translatable" data-lang-en="Books & Writing" data-lang-fr="Livres & Écriture">Books & Writing</h2>
-                <p class="section-description translatable" data-lang-en="Discover my collection of stories, from middle-grade adventures to thrilling novels that captivate readers of all ages." data-lang-fr="Découvrez ma collection d'histoires, des aventures pour jeunes lecteurs aux romans palpitants qui captivent les lecteurs de tous âges.">
-                    Discover my collection of stories, from middle-grade adventures to thrilling novels that captivate readers of all ages.
+                <p class="section-description translatable" data-lang-en="From middle-grade adventures to suspenseful novels — stories that stay with you." data-lang-fr="Des aventures pour jeunes lecteurs aux romans à suspense — des histoires qui restent avec vous.">
+                    From middle-grade adventures to suspenseful novels — stories that stay with you.
                 </p>
-                
+
                 <div class="books-grid">
                     <div class="book-card">
                         <div class="book-thumbnail">
-                            <img src="static/images/ww_cover.webp"
-                                 alt="The Adventures of William Woodpecker - Cover"></div>
+                            <img src="static/images/ww_cover.webp" alt="The Adventures of William Woodpecker - Cover">
+                        </div>
                         <h3>The Adventures of William Woodpecker</h3>
                         <p class="translatable" data-lang-en="A middle-grade adventure about a curious woodpecker who sets out on a journey of self-discovery and friendship." data-lang-fr="Une aventure pour jeunes lecteurs sur un pivert curieux qui part en voyage de découverte de soi et d'amitié.">A middle-grade adventure about a curious woodpecker who sets out on a journey of self-discovery and friendship.</p>
                         <div class="book-links">
                             <a href="https://williamwoodpecker.com" class="book-link translatable" target="_blank" data-lang-en="Visit Site" data-lang-fr="Visiter le site">Visit Site</a>
                         </div>
                     </div>
-                    
-                     <div class="book-card">
+
+                    <div class="book-card">
                         <div class="book-thumbnail">
-                            <img src="static/images/elements_of_risk.webp"
-                            alt="Elements of Risk - Cover">
+                            <img src="static/images/elements_of_risk.webp" alt="Elements of Risk - Cover">
                         </div>
                         <h3>Elements of Risk</h3>
                         <p class="translatable" data-lang-en="A suspenseful novel with high stakes, danger, and gripping twists that will keep you on the edge of your seat." data-lang-fr="Un roman à suspense avec des enjeux élevés, du danger et des rebondissements captivants qui vous tiendront en haleine.">A suspenseful novel with high stakes, danger, and gripping twists that will keep you on the edge of your seat.</p>
@@ -165,8 +171,7 @@
 
                     <div class="book-card">
                         <div class="book-thumbnail">
-                            <img src="static/images/the_horn_mansion.webp"
-                            alt="The Horn Mansion - Cover">
+                            <img src="static/images/the_horn_mansion.webp" alt="The Horn Mansion - Cover">
                         </div>
                         <h3>The Horn Mansion</h3>
                         <p class="translatable" data-lang-en="A thrilling mystery with supernatural undertones and dark secrets waiting to be uncovered." data-lang-fr="Un mystère captivant avec des nuances surnaturelles et des secrets sombres qui attendent d'être découverts.">A thrilling mystery with supernatural undertones and dark secrets waiting to be uncovered.</p>
@@ -175,150 +180,135 @@
                         </div>
                     </div>
                 </div>
-                
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="https://bradyridgway.com" class="dev-link translatable" target="_blank" data-lang-en="Explore Author Site" data-lang-fr="Découvrir le site de l'auteur">
-                        Explore Author Site
-                    </a>
+
+                <div class="books-cta">
+                    <a href="https://bradyridgway.com" class="section-cta-link translatable" target="_blank" data-lang-en="Explore Author Site" data-lang-fr="Découvrir le site de l'auteur">Explore Author Site</a>
                 </div>
             </section>
 
-            <!-- Sonciel Section -->
-            <section class="section sonciel-section reveal">
-                <div class="sonciel-header">
+        </div>
+
+        <!-- Sonciel Section — full-width dark -->
+        <section class="sonciel-section reveal" id="sonciel">
+            <div class="sonciel-inner">
+                <div class="sonciel-logo-wrap">
                     <div class="sonciel-logo">
-                        <img src="static/images/sonciel_logo.webp"
-                            alt="Sonciel Logo">
+                        <img src="static/images/sonciel_logo.webp" alt="Sonciel Logo">
                     </div>
-                    <div>
-                        <h2 class="translatable" style="margin-bottom: 0;" data-lang-en="Music Software" data-lang-fr="Logiciel Musical">Music Software</h2>
-                        <p class="section-description translatable" style="margin-bottom: 0;" data-lang-en="Sonciel is developing software for studio workflow and session attribution — currently in concept development." data-lang-fr="Sonciel développe des logiciels pour le workflow studio et l'attribution de sessions — actuellement en phase de conception.">
-                            Sonciel is developing software for studio workflow and session attribution — currently in concept development.
-                        </p>
-                    </div>
+                    <a href="https://sonciel.com" class="cta-secondary translatable" target="_blank" data-lang-en="Visit Sonciel.com" data-lang-fr="Visiter Sonciel.com">Visit Sonciel.com</a>
                 </div>
-
-                <div class="sonciel-concept">
-                    <p class="translatable" data-lang-en="A DAW plugin designed to capture who played what during a recording session and carry that information forward into crediting, rights registration, and payment workflows." data-lang-fr="Un plugin DAW conçu pour enregistrer qui a joué quoi lors d'une session d'enregistrement et transmettre ces informations aux processus de crédits, d'enregistrement des droits et de paiement.">A DAW plugin designed to capture who played what during a recording session and carry that information forward into crediting, rights registration, and payment workflows.</p>
-                </div>
-
-                <div style="text-align: center; margin-top: 2rem;">
-                    <a href="https://sonciel.com" class="dev-link translatable" target="_blank" data-lang-en="Visit Sonciel.com" data-lang-fr="Visiter Sonciel.com">
-                        Visit Sonciel.com
-                    </a>
-                </div>
-            </section>
-
-            <!-- Development Section -->
-            <section class="section reveal">
-                <h2 class="translatable" data-lang-en="Development Projects" data-lang-fr="Projets de Développement">Development Projects</h2>
-                <p class="section-description translatable" data-lang-en="I practice Python and Django development, experimenting with tools and small web applications that solve real-world problems." data-lang-fr="Je pratique le développement Python et Django, en expérimentant avec des outils et de petites applications web qui résolvent des problèmes concrets.">
-                    I practice Python and Django development, experimenting with tools and small web applications that solve real-world problems.
-                </p>
-                
-                <div class="dev-links">
-                    <a href="https://github.com/RedHorseMane" class="dev-link translatable" target="_blank" data-lang-en="💻 GitHub Profile" data-lang-fr="💻 Profil GitHub">
-                        💻 GitHub Profile
-                    </a>
-                    <a href="https://bradyridgway.pythonanywhere.com" class="dev-link translatable" target="_blank" data-lang-en="🌐 Web Projects" data-lang-fr="🌐 Projets Web">
-                        🌐 Web Projects
-                    </a>
-                </div>
-            </section>
-
-            <!-- Interactive Content -->
-            <div class="interactive-content reveal">
-                <div class="quote-box">
-                    <h2 class="translatable" style="margin-bottom: 1rem;" data-lang-en="Quote of the Day" data-lang-fr="Citation du Jour">Quote of the Day</h2>
-                    <div id="quote-content" class="quote-content translatable" data-lang-en="Loading inspiring quote..." data-lang-fr="Chargement de la citation inspirante...">Loading inspiring quote...</div>
-                </div>
-
-                <div class="advice-box">
-                    <h2 class="translatable" style="margin-bottom: 1rem;" data-lang-en="Advice of the Moment" data-lang-fr="Conseil du Moment">Advice of the Moment</h2>
-                    <div id="advice-content" class="advice-content translatable" data-lang-en="Loading helpful advice..." data-lang-fr="Chargement du conseil utile...">Loading helpful advice...</div>
+                <div class="sonciel-body">
+                    <h2 class="translatable" data-lang-en="Music Software" data-lang-fr="Logiciel Musical">Music Software</h2>
+                    <p class="section-description translatable" data-lang-en="Sonciel is developing software for studio workflow and session attribution — currently in concept development." data-lang-fr="Sonciel développe des logiciels pour le workflow studio et l'attribution de sessions — actuellement en phase de conception.">
+                        Sonciel is developing software for studio workflow and session attribution — currently in concept development.
+                    </p>
+                    <p class="sonciel-concept-text translatable" data-lang-en="A DAW plugin designed to capture who played what during a recording session and carry that information forward into crediting, rights registration, and payment workflows." data-lang-fr="Un plugin DAW conçu pour enregistrer qui a joué quoi lors d'une session d'enregistrement et transmettre ces informations aux processus de crédits, d'enregistrement des droits et de paiement.">A DAW plugin designed to capture who played what during a recording session and carry that information forward into crediting, rights registration, and payment workflows.</p>
                 </div>
             </div>
+        </section>
+
+        <div class="container">
+
+            <!-- ObraVera Section -->
+            <section class="section reveal" id="obravera">
+                <h2>ObraVera</h2>
+                <p class="obravera-tagline translatable" data-lang-en="True work. True artists." data-lang-fr="Un travail authentique. De vrais artistes.">True work. True artists.</p>
+                <p class="section-description translatable" data-lang-en="ObraVera is the international Registry of Record connecting audiences with verified human creators — built for creators, not advertisers." data-lang-fr="ObraVera est le Registre international de référence qui connecte les publics avec des créateurs humains vérifiés — conçu pour les créateurs, pas pour les annonceurs.">
+                    ObraVera is the international Registry of Record connecting audiences with verified human creators — built for creators, not advertisers.
+                </p>
+                <div class="dev-links">
+                    <a href="https://obravera.com" class="dev-link translatable" target="_blank" data-lang-en="Visit ObraVera.com" data-lang-fr="Visiter ObraVera.com">Visit ObraVera.com</a>
+                    <a href="https://github.com/RedHorseMane" class="dev-link dev-link--outline translatable" target="_blank" data-lang-en="GitHub Profile" data-lang-fr="Profil GitHub">GitHub Profile</a>
+                </div>
+            </section>
+
+            <!-- Editorial Quote -->
+            <section class="editorial-quote reveal">
+                <p class="quote-label translatable" data-lang-en="Quote of the Day" data-lang-fr="Citation du Jour">Quote of the Day</p>
+                <div id="quote-content">&#8230;</div>
+            </section>
+
         </div>
     </main>
+
     <footer class="footer">
+        <div class="container">
             <div class="footer-links">
                 <a href="https://bradyridgway.com" class="translatable" data-lang-en="Author Site" data-lang-fr="Site de l'auteur">Author Site</a>
                 <a href="https://williamwoodpecker.com">William Woodpecker</a>
                 <a href="https://sonciel.com">Sonciel</a>
                 <a href="https://github.com/RedHorseMane">GitHub</a>
             </div>
-            <p class="translatable" data-lang-en="© 2026 Brady Ridgway. All rights reserved." data-lang-fr="© 2026 Brady Ridgway. Tous droits réservés.">&copy; 2026 Brady Ridgway. All rights reserved.</p>
+            <p class="footer-copy translatable" data-lang-en="© 2026 Brady Ridgway. All rights reserved." data-lang-fr="© 2026 Brady Ridgway. Tous droits réservés.">&copy; 2026 Brady Ridgway. All rights reserved.</p>
+            <p class="footer-meta">
+                No ad tracking &middot; No sale of personal data &middot;
+                <a href="docs/privacy.html" class="translatable" hreflang="en" data-lang-en="Privacy Policy" data-lang-fr="Politique de Confidentialité">Privacy Policy</a>
+            </p>
         </div>
-        <div class="container">
-          <p style="text-align: center; font-size: 0.9em; margin-top: 2rem;">
-            <a style="color: white;" href="docs/privacy.html" hreflang="en" class="translatable" data-lang-en="Privacy Policy" data-lang-fr="Politique de Confidentialité">Privacy Policy</a> |
-            <a style="color: white;" href="docs/confidentialite.html" hreflang="fr" class="translatable" data-lang-en="Privacy Policy" data-lang-fr="Politique de Confidentialité">Politique de Confidentialité</a>
-        </p>
     </footer>
 
     <script>
-        // Language Toggle Function
+        // Language Toggle
         function toggleLanguage(lang) {
-            // Update HTML lang attribute
             document.documentElement.lang = lang;
-
-            // Get all translatable elements
-            const translatableElements = document.querySelectorAll('.translatable');
-
-            // Update each element with the appropriate language text
-            translatableElements.forEach(element => {
-                const text = element.getAttribute(`data-lang-${lang}`);
-                if (text) {
-                    element.textContent = text;
-                }
+            document.querySelectorAll('.translatable').forEach(function(el) {
+                var text = el.getAttribute('data-lang-' + lang);
+                if (text) el.textContent = text;
             });
-
-            // Store language preference in localStorage
             localStorage.setItem('preferredLanguage', lang);
+            document.querySelectorAll('.lang-btn').forEach(function(btn) {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
         }
 
-        // Load saved language preference on page load
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferredLanguage');
-            if (savedLang && (savedLang === 'en' || savedLang === 'fr')) {
-                toggleLanguage(savedLang);
-            }
+        document.addEventListener('DOMContentLoaded', function() {
+            var saved = localStorage.getItem('preferredLanguage');
+            if (saved === 'en' || saved === 'fr') toggleLanguage(saved);
         });
 
-        // Fetch Quote of the Day
+        // Sticky nav
+        var nav = document.getElementById('site-nav');
+        window.addEventListener('scroll', function() {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // Fetch Quote of the Day — build DOM nodes to avoid innerHTML
         fetch('https://bradyridgway.pythonanywhere.com/api/quote/')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('quote-content').innerHTML =
-                    `"${data.quote.body}"<br><br><strong>— ${data.quote.author}</strong>`;
+            .then(function(r) { return r.json(); })
+            .then(function(data) {
+                var container = document.getElementById('quote-content');
+                container.textContent = '';
+
+                var bodyText = document.createTextNode('“' + data.quote.body + '”');
+                container.appendChild(bodyText);
+
+                var br1 = document.createElement('br');
+                var br2 = document.createElement('br');
+                container.appendChild(br1);
+                container.appendChild(br2);
+
+                var attribution = document.createElement('span');
+                attribution.className = 'quote-attribution';
+                attribution.textContent = '— ' + data.quote.author;
+                container.appendChild(attribution);
             })
-            .catch(error => {
-                console.error('Error fetching quote:', error);
-                document.getElementById('quote-content').innerText = "Wisdom comes from reflection and experience.";
+            .catch(function() {
+                document.getElementById('quote-content').textContent = '“Wisdom comes from reflection and experience.”';
             });
 
-        // Fetch Advice of the Moment
-        fetch('https://api.adviceslip.com/advice')
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('advice-content').innerText = data.slip.advice;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById('advice-content').innerText = "Take time to appreciate the journey, not just the destination.";
-            });
-
-        // Scroll-reveal with IntersectionObserver
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
+        // Scroll Reveal
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                     revealObserver.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1 });
+        }, { threshold: 0.08 });
 
-        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        document.querySelectorAll('.reveal').forEach(function(el) {
+            revealObserver.observe(el);
+        });
     </script>
 </body>
 </html>
